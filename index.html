@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinematic Workflow Scroll Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">Scroll Storytelling</p>
+      <h1>Interactive Workflow Experience</h1>
+      <p class="subtitle">Not static cards — this is a cinematic, scroll-scrubbed section with depth, motion and stage transitions.</p>
+    </header>
+
+    <section class="workflow-scrollytelling" id="workflowStory">
+      <div class="workflow-sticky">
+        <div class="glow glow-a"></div>
+        <div class="glow glow-b"></div>
+
+        <div class="top-progress">
+          <span id="topProgressFill"></span>
+        </div>
+
+        <div class="story-layout">
+          <aside class="step-nav" id="stepNav">
+            <button class="step-chip is-active" data-target="0">01 Requirement Analysis</button>
+            <button class="step-chip" data-target="1">02 Strategy &amp; Planning</button>
+            <button class="step-chip" data-target="2">03 UI/UX Design</button>
+            <button class="step-chip" data-target="3">04 Development</button>
+            <button class="step-chip" data-target="4">05 Testing &amp; QA</button>
+            <button class="step-chip" data-target="5">06 Deployment &amp; Support</button>
+          </aside>
+
+          <section class="stage" id="stage">
+            <article class="stage-card is-active" data-index="0">
+              <p class="card-index">Step 01</p>
+              <h2>Requirement Analysis</h2>
+              <ul>
+                <li>Business understanding</li>
+                <li>Market &amp; competitor research</li>
+                <li>Technical feasibility</li>
+              </ul>
+            </article>
+
+            <article class="stage-card" data-index="1">
+              <p class="card-index">Step 02</p>
+              <h2>Strategy &amp; Planning</h2>
+              <ul>
+                <li>Tech stack selection</li>
+                <li>Architecture planning</li>
+                <li>Timeline &amp; milestones</li>
+              </ul>
+            </article>
+
+            <article class="stage-card" data-index="2">
+              <p class="card-index">Step 03</p>
+              <h2>UI/UX Design</h2>
+              <ul>
+                <li>Wireframes</li>
+                <li>High-fidelity designs</li>
+                <li>Client approval</li>
+              </ul>
+            </article>
+
+            <article class="stage-card" data-index="3">
+              <p class="card-index">Step 04</p>
+              <h2>Development</h2>
+              <ul>
+                <li>Frontend + Backend</li>
+                <li>API Integration</li>
+                <li>Security implementation</li>
+              </ul>
+            </article>
+
+            <article class="stage-card" data-index="4">
+              <p class="card-index">Step 05</p>
+              <h2>Testing &amp; QA</h2>
+              <ul>
+                <li>Performance testing</li>
+                <li>Bug fixing</li>
+                <li>Device compatibility</li>
+              </ul>
+            </article>
+
+            <article class="stage-card" data-index="5">
+              <p class="card-index">Step 06</p>
+              <h2>Deployment &amp; Support</h2>
+              <ul>
+                <li>Live deployment</li>
+                <li>Monitoring</li>
+                <li>Maintenance &amp; scaling</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="references">
+      <h3>Inspiration references you can explore</h3>
+      <p>
+        <a href="https://dribbble.com/tags/scroll_animation" target="_blank" rel="noreferrer">Dribbble Scroll Animation</a> ·
+        <a href="https://www.awwwards.com/websites/animation/" target="_blank" rel="noreferrer">Awwwards Animation</a> ·
+        <a href="https://godly.website/tag/animation" target="_blank" rel="noreferrer">Godly Animation</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
