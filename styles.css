@@ -1,0 +1,228 @@
+:root {
+  --bg: #050714;
+  --bg-2: #0f1330;
+  --text: #eef2ff;
+  --muted: #b8c0de;
+  --chip: rgba(255, 255, 255, 0.09);
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.22);
+  --accent-a: #6f7cff;
+  --accent-b: #24d7ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(111, 124, 255, 0.2), transparent 38%),
+    radial-gradient(circle at 80% 0%, rgba(36, 215, 255, 0.16), transparent 30%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+main {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 2.8rem;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent-b);
+}
+
+h1 {
+  margin: 0.9rem auto;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 820px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.workflow-scrollytelling {
+  height: 520vh;
+  position: relative;
+}
+
+.workflow-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.4rem 0 1.6rem;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 8, 21, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+.glow {
+  position: absolute;
+  width: 44vmin;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  filter: blur(30px);
+  opacity: 0.45;
+  pointer-events: none;
+  transition: transform 0.3s linear;
+}
+
+.glow-a {
+  background: rgba(111, 124, 255, 0.55);
+  top: -12vmin;
+  right: -10vmin;
+}
+
+.glow-b {
+  background: rgba(36, 215, 255, 0.42);
+  bottom: -16vmin;
+  left: -11vmin;
+}
+
+.top-progress {
+  height: 8px;
+  width: min(94%, 1020px);
+  margin: 0 auto 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+  overflow: hidden;
+}
+
+.top-progress span {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  box-shadow: 0 0 24px rgba(36, 215, 255, 0.5);
+}
+
+.story-layout {
+  height: calc(100% - 40px);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  width: min(96%, 1100px);
+  margin: 0 auto;
+}
+
+.step-nav {
+  display: grid;
+  gap: 0.65rem;
+  align-content: center;
+}
+
+.step-chip {
+  border: 1px solid transparent;
+  background: var(--chip);
+  color: #dce3ff;
+  text-align: left;
+  padding: 0.78rem 0.9rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-chip:hover {
+  transform: translateX(4px);
+  border-color: rgba(111, 124, 255, 0.35);
+}
+
+.step-chip.is-active {
+  border-color: rgba(36, 215, 255, 0.65);
+  background: linear-gradient(120deg, rgba(111, 124, 255, 0.25), rgba(36, 215, 255, 0.2));
+  color: #fff;
+}
+
+.stage {
+  position: relative;
+  height: 100%;
+  perspective: 1500px;
+}
+
+.stage-card {
+  position: absolute;
+  inset: 16% 4% 12%;
+  padding: clamp(1rem, 2vw, 1.8rem);
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  background: linear-gradient(165deg, var(--card), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+  transform-style: preserve-3d;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1), opacity 0.4s ease, border-color 0.3s ease;
+}
+
+.stage-card.is-active {
+  border-color: rgba(36, 215, 255, 0.55);
+}
+
+.card-index {
+  margin: 0;
+  color: var(--accent-b);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+h2 {
+  margin: 0.45rem 0 0.8rem;
+  font-size: clamp(1.25rem, 3vw, 2.2rem);
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+}
+
+.references {
+  text-align: center;
+  padding: 2.4rem 1rem 4rem;
+}
+
+.references h3 {
+  margin-bottom: 0.5rem;
+}
+
+.references a {
+  color: #b9daff;
+}
+
+@media (max-width: 920px) {
+  .workflow-scrollytelling { height: auto; }
+  .workflow-sticky {
+    position: relative;
+    height: auto;
+    padding-bottom: 1.1rem;
+  }
+  .story-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 0.9rem;
+  }
+  .stage {
+    min-height: 420px;
+  }
+  .stage-card { inset: 0; }
+}
